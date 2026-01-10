@@ -1,4 +1,13 @@
-export default function HomePage() {
+export default async function HomePage() {
+
+  try {
+    const res = await fetch('https://api.github.com/users/sameer9823');
+    const data = await res.json();
+    console.log(data);
+  } catch (error) {
+    console.error(error);
+  }
+ 
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
       <div className="max-w-4xl text-center bg-white rounded-2xl shadow-md p-10">
@@ -55,6 +64,12 @@ export default function HomePage() {
             </p>
           </div>
         </div>
+      </div>
+      <div className="mt-10">
+        
+        <p className="text-gray-600 text-sm">
+          Powered by: Next.js, React, and Tailwind CSS
+        </p>
       </div>
     </div>
   );
