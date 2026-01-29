@@ -1,3 +1,5 @@
+import UserForms from "./components/UserForms";
+
 export default async function HomePage() {
 
   try {
@@ -9,6 +11,8 @@ export default async function HomePage() {
   }
  
   return (
+    <>
+    
     <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
       <div className="max-w-4xl text-center bg-white rounded-2xl shadow-md p-10">
         <h1 className="text-4xl font-bold text-gray-800 mb-4">
@@ -67,10 +71,11 @@ export default async function HomePage() {
       </div>
       <div className="mt-10">
         
-        <p className="text-gray-600 text-sm">
-          Powered by: Next.js, React, and Tailwind CSS
-        </p>
+       
       </div>
+
     </div>
+      <UserForms/>
+    </>
   );
 }
