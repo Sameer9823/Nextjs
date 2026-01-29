@@ -1,3 +1,4 @@
+import FontExample from "./components/FontExample";
 import UserForms from "./components/UserForms";
 
 export default async function HomePage() {
@@ -76,6 +77,7 @@ export default async function HomePage() {
 
     </div>
       <UserForms/>
+      <FontExample/>
     </>
   );
 }
